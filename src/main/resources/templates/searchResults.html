@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+<h1>This Is What We Found</h1>
+<ul>
+    <li th:each="item : ${items}">
+        <p>Name: <span th:text="${item.name}"></span></p>
+        <p>Price: <span th:text="${item.price}"></span></p>
+        <p>Url: <a th:href="${item.url}" th:text="${item.url}"></a></p>
+        <img th:src="${item.image}" alt="Product Image" />
+    </li>
+</ul>
+</body>
+</html>

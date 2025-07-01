@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Item Search</title>
+</head>
+<body>
+<h1>Search for an Item</h1>
+
+<form th:action="@{/search}" method="get">
+  <!-- Item query input -->
+  <label for="query">Item Name:</label>
+  <input type="text" id="query" name="query" required>
+  <br><br>
+
+  <!-- Scraper checkboxes -->
+  <p>Select scrapers to use:</p>
+  <input type="checkbox" id="scraper0" name="nums" value="0">
+  <label for="scraper0">Scraper 0</label><br>
+
+  <input type="checkbox" id="scraper1" name="nums" value="1">
+  <label for="scraper1">Scraper 1</label><br>
+
+  <br>
+  <input type="submit" value="Search">
+</form>
+</body>
+</html>
